@@ -1,0 +1,143 @@
+/* <!-- -------- Google Font Roboto -------- --> */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+
+body {margin: 0%;
+    font-family: 'Roboto', sans-serif;
+    background-color: #ffffff;
+    color: #000;
+    justify-content: center;
+    align-items: center;}
+a { text-decoration: none;}
+li { list-style: none;}
+.btns {
+    box-shadow: 
+    rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, 
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, 
+    rgba(0, 0, 0, 0.06) 0px 2px 1px, 
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, 
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, 
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, 
+    rgba(0, 0, 0, 0.09) 0px 10px 17px;
+    background-color: #008080;
+    color: white ;
+    padding: .6em 1em ;
+    border-radius: 2em;
+    border: 2px solid transparent;
+    margin: 1em;}
+.btns:hover {border: 2px solid #008080;
+    background-color: #ffffff;
+    color: #000;}
+h2 {margin: 2em 0 1em 0;;
+    text-align: center;
+    color: #000000;
+    font-weight: 600;}
+h4 {color: #000000;
+    font-weight: 600;}
+
+    /* ---------- Nav Section ---------- */ 
+
+nav ul li a { color: #000;
+    text-transform: uppercase;}
+nav {box-shadow: 0 1px 5px black;
+    font-weight: 500;}
+.nav-section .logo:hover{
+    transform:rotateX(360deg);
+    transition-duration: 1.5s;}
+nav a:hover {color: #ffffff;
+    border-bottom: 3px solid #000000;}
+section { padding: 2em 0;}
+    /* ----- Hearder Section ----- */
+#home {background-color: #0080807c; }
+.home {display: flex;
+    position: relative;
+   
+    
+}
+.home-sec {padding-top: 3em;
+    display: grid; 
+    grid-template-columns: repeat(2, 1fr); 
+    align-items: center;
+    text-align: center;
+    justify-items: center;  
+}
+.cover-pic {border: 5px solid ;
+    border-radius: 15em;
+    overflow: hidden;
+    width: 15em;
+    height: 15em;
+    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, 
+    rgba(0, 0, 0, 0.07) 0px 2px 4px, 
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, 
+    rgba(0, 0, 0, 0.07) 0px 8px 16px, 
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    animation: float 2s ease-in-out infinite;
+    animation-delay: 3s;}
+.cover-pic img{width: 15em;
+    height: 15em;}
+@keyframes float {
+    0%{transform: translatey(0);}
+    50%{transform: translatex(-25px);}
+    100%{transform: translatey(0);}}
+
+/* .cover-title { display: relative;} */
+.cover-title .freelancer {
+    height: 2em ;
+    overflow: hidden;}
+.freelancer li {color: black ; 
+    font-size: 60px;
+    position: relative;
+    top:0;
+    animation: slide 10s steps(5) infinite ;}
+@keyframes slide {100% {top: -360px;}}
+.freelancer li span{
+    position: relative;}
+
+    /* ----- Skills Section ----- */
+.skills{
+    display: grid;
+    place-items: center;
+    box-shadow: 
+    rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, 
+    rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, 
+    rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
+}
+.skills-sec {
+    height: 20em;
+    margin: auto;
+    position: inherit;
+    width: 90%;
+    display: grid;
+    place-items: center;
+    overflow: hidden;
+}
+.slide-container{display: flex;
+    width: calc(250px * 18);
+    animation: scroll 25s linear infinite;}
+@keyframes scroll { 
+    0% {transform: translateX(0);}
+    100% {transform: translateX(calc(-250px * 10));}}
+.slide-img {
+    width: 10em;
+    height: 1em;
+    display: flex;
+    align-items: center;
+    padding: 1em;
+    perspective: 100px;
+}
+.slide-img>img {width: 8em;
+    height: 8em;
+    transition: transform 2s;
+}
+.slide-img>img:hover {transform: scale(1.2);
+    transition-duration: 1.5s; }
+
+    /* ----- Portfolio Section ----- */
+
+.portfolio-sec {display: grid;
+    grid-template-columns: repeat(2,1);
+    gap: 2em;
+}
+
+    /* ----- Mobile Responsive ----- */
+
+
