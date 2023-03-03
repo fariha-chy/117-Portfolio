@@ -27,7 +27,7 @@ li { list-style: none;}
 .btns:hover {border: 2px solid #008080;
     background-color: #ffffff;
     color: #000;}
-h2 {margin: 2em 0 1em 0;;
+h2 {padding: 2em 0 1em 0;;
     text-align: center;
     color: #000000;
     font-weight: 600;}
@@ -49,9 +49,7 @@ section { padding: 2em 0;}
     /* ----- Hearder Section ----- */
 #home {background-color: #0080807c; }
 .home {display: flex;
-    position: relative;
-   
-    
+    position: relative; 
 }
 .home-sec {padding-top: 3em;
     display: grid; 
@@ -79,7 +77,6 @@ section { padding: 2em 0;}
     50%{transform: translatex(-25px);}
     100%{transform: translatey(0);}}
 
-/* .cover-title { display: relative;} */
 .cover-title .freelancer {
     height: 2em ;
     overflow: hidden;}
@@ -137,6 +134,170 @@ section { padding: 2em 0;}
     grid-template-columns: repeat(2,1);
     gap: 2em;
 }
+
+    /* ----- Contact Section ----- */
+    .contact-sec {
+        border-radius: 5px;
+        background-color: #f2f2f2;
+        padding: 1em;
+      }
+    .column {
+        float: left;
+        width: 50%;
+        margin-top: 6px;
+        padding: 1em;
+      }
+    .row:after {
+        content: "";
+        display: table;
+        clear: both;
+      }
+    .contact-sec .contact-box{
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+    .contact-box .contact{
+        display: flex;
+        flex-direction: column;
+    }
+    .contact-box .one{
+        flex-basis: 35%;
+        min-width: 320px;
+        margin-right: 60px;
+    }
+    .one .contact-title h3{
+        position: relative;
+        font-weight: 600;
+        color: #008080;
+        display: inline-block;
+        margin-bottom: 1em;
+    }
+    .one .contact.title h3::before{
+        content: '';
+        position: absolute;
+        width: 50%;
+        height: 1px;
+        background-color: #008080;
+        top: 120%;
+        left: 0;
+    }
+
+    .one .contact-title p{
+        font-size: 17px;
+        color: #000000;
+        letter-spacing: 1px;
+        line-height: 1.2;
+        padding-bottom: 1px;
+    }
+    .one .contact-info{
+        margin-bottom: .5em;
+    }
+    .contact-info .icon-group{
+        display: flex;
+        align-items: center;
+        margin: 25px 0px;
+    }
+    .icon-group .icon{
+        width: 2em;
+        height: 2em;
+        border: 2px solid #008080;
+        border-radius: 50%;
+        margin-right: 1em;
+        position: relative;
+    }
+    .icon-group .icon i{
+        font-size: 1em;
+        color: #000000;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    .icon-group .details span{
+        display: block;
+        color: #000000;
+        font-size: 18px;
+    }
+    .icon-group .details span:nth-child(1){
+        text-transform: uppercase;
+        color:  #008080;
+    }
+     .one .social-icon{
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        flex-wrap: wrap;
+        margin: 1em 0 1em;
+    } 
+    .social-icon a{
+        width: 2em;
+        height: 2em;
+        text-decoration: none;
+        text-align: center;
+        margin-right: 1em;
+        border-radius: 5px;
+    }
+    .social-icon a i{ width: 2em;
+        height: 2em;
+        color: #000000;
+        line-height: 1em;
+    }
+    input[type=text], select, textarea {
+        width: 100%;
+        padding: 12px;
+        border: 1px solid #ccc;
+        margin-top: 6px;
+        margin-bottom: 16px;
+        resize: vertical;
+      }
+    
+      input[type=submit] {
+        background-color: #008080;
+        color: white;
+        padding: 12px 20px;
+        border: none;
+        cursor: pointer;
+      }
+    input[type=submit]:hover {
+        background-color: #000000;
+      }
+    
+    
+    /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+    @media screen and (max-width: 600px) {
+      .column, input[type=submit] {
+        width: 100%;
+        margin-top: 0;
+      }
+    }
+
+@media(max-width: 1100px){
+	.messageForm .halfWidth{
+		flex-basis: 100%;
+	}
+}
+@media(max-width: 900px){
+	.container .row{
+		flex-wrap: wrap;
+	}
+	.row section.left, .row section.right{
+		flex-basis: 100%;
+		margin: 0px;
+	}
+}
+
+    /* ----- Footer Section ----- */
+
+footer {box-shadow: 
+    rgba(0, 0, 0, 0.25) 0px 54px 55px, 
+    rgba(0, 0, 0, 0.12) 0px -12px 30px, 
+    rgba(0, 0, 0, 0.12) 0px 4px 6px, 
+    rgba(0, 0, 0, 0.17) 0px 12px 13px, 
+    rgba(0, 0, 0, 0.09) 0px -3px 5px;
+    background-color: #000000;
+    text-align: center;
+    }
 
     /* ----- Mobile Responsive ----- */
 
