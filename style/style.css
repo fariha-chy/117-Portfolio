@@ -97,14 +97,14 @@ section { padding: 2em 0;}
     .service-sec {position: relative;
         width: 90%;
         display: grid;
-        grid-template-columns: repeat(3,1fr);
-        grid-template-rows: auto;
-        gap: 2em;
+        grid-template-columns: repeat(auto-fit, minmax(300px ,1fr ));
+        /* grid-template-rows: auto; */
+        grid-gap: 30px;
     }
     .service-sec .box {
         position: relative;
-        width: 280px ;
-        height: 280px;
+        /* width: 280px ;
+        height: 280px; */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -163,24 +163,38 @@ section { padding: 2em 0;}
         transform: translateY(-50px);
         opacity: 0;
         visibility: hidden;
-    }
-    .box:hover .content a {
-        transform: translateY(0px);
-        opacity: 100;
-        visibility: visible;
-    }
-    .box .content a:hover {
-        color: #000; ;
-        background: #ffffff;
-    }
+}
+.box:hover .content a {
+    transform: translateY(0px);
+    opacity: 100;
+    visibility: visible;}
+.box .content a:hover {
+    color: #000; ;
+    background: #ffffff;}
     
+    /* ----- Skills Section ----- */
+.skills {
+    
+}
+.row>.col {border-radius: 10px;
+    color: #ffffff;
+    background-color: #008080; 
+    box-shadow: 
+    rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, 
+    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, 
+    rgba(0, 0, 0, 0.06) 0px 2px 1px, 
+    rgba(0, 0, 0, 0.09) 0px 4px 2px, 
+    rgba(0, 0, 0, 0.09) 0px 8px 4px, 
+    rgba(0, 0, 0, 0.09) 0px 16px 8px, 
+    rgba(0, 0, 0, 0.09) 0px 10px 17px;
+}
 
     /* ----- Portfolio Section ----- */
 
     .portfolio {padding-top: 1em;}
     .portfolio-section { display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 4em;
+        gap: 2em;
         border-radius: 1em;}
     .picture {width: 20em;
         height: 20em;
@@ -243,9 +257,7 @@ section { padding: 2em 0;}
         top: 120%;
         left: 0;
     }
-
     .one .contact-title p{
-
         color: #000000;
         letter-spacing: 1px;
         line-height: 1.2;
@@ -358,8 +370,8 @@ footer {box-shadow:
 
     /* ----- Contact ----- */
 
-}
 
+}
     /* ----- Tab Responsive ----- */
 
 @media screen and (min-width: 768px)  {
@@ -380,10 +392,7 @@ footer {box-shadow:
     /* ----- About ----- */
 
     /* ----- Contact ----- */
-
-
 }
-
 /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
     .column, input[type=submit] {
