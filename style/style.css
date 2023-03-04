@@ -19,7 +19,7 @@ li { list-style: none;}
     rgba(0, 0, 0, 0.09) 0px 16px 8px, 
     rgba(0, 0, 0, 0.09) 0px 10px 17px;
     background-color: #008080;
-    color: white ;
+    color: rgb(0, 0, 0) ;
     padding: .6em 1em ;
     border-radius: 2em;
     border: 2px solid transparent;
@@ -89,7 +89,9 @@ section { padding: 2em 0;}
 .freelancer li span{
     position: relative;}
 
+
     /* ----- Skills Section ----- */
+
 .skills{
     display: grid;
     place-items: center;
@@ -99,7 +101,7 @@ section { padding: 2em 0;}
     rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
 }
 .skills-sec {
-    height: 20em;
+    /* height: 10em; */
     margin: auto;
     position: inherit;
     width: 90%;
@@ -115,17 +117,17 @@ section { padding: 2em 0;}
     100% {transform: translateX(calc(-250px * 10));}}
 .slide-img {
     width: 10em;
-    height: 1em;
+    height: 10em;
     display: flex;
     align-items: center;
     padding: 1em;
     perspective: 100px;
 }
-.slide-img>img {width: 8em;
-    height: 8em;
-    transition: transform 2s;
+.slide-img>img {width: 5em;
+    height: 5em;
+    transition: transform 6s;
 }
-.slide-img>img:hover {transform: scale(1.2);
+.slide-img>img:hover {transform: scale(1.4);
     transition-duration: 1.5s; }
 
     /* ----- Portfolio Section ----- */
@@ -135,10 +137,93 @@ section { padding: 2em 0;}
     gap: 2em;
 }
 
+    /* ----- Sample Section ----- */
+
+    .sample-sec {position: relative;
+        width: 90%;
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-template-rows: auto;
+        gap: 2em;
+    }
+    .sample-sec .box {
+        position: relative;
+        height: 400px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: #008080;
+    }
+    .sample-sec .box:before {
+        content:'' ;
+        position: absolute;
+        top: -2px;
+        left: -2px;
+        right: -2px;
+        bottom: -2px;
+        background-color: #000;
+        transform: skew(2deg, 2deg);
+        z-index: -1 ;
+    }
+    .content {justify-content: center;
+        position: relative;
+        padding: 1em;
+    }
+    .box .content h2{
+        position: absolute;
+        top: -10px;
+        right: 20px;
+        margin: 0;
+        padding: 0;
+        font-size: 10em;
+        color: #5555557a;
+        transition: 0.5s;
+    }
+    .box:hover .content h2{
+        top:-75px; 
+    }
+    .box .content h3{
+        margin: 0 0 10px;
+        padding: 0;
+        font-size: 24px;
+        font-weight: 600;
+        color: #000000;
+    }
+    .box .content p {
+        margin: 0;
+        padding: 0;
+        
+    }
+    .box .content a {
+        position: relative;
+        margin: 0;
+        margin-top: 10px;
+        border: 1px solid #000;
+        border-radius: 10px;
+        color: #ccc;
+        padding: 10px 20px;
+        display: inline-block;
+        transition: 0.5s;
+        transform: translateY(-50px);
+        opacity: 0;
+        visibility: hidden;
+    }
+    .box:hover .content a {
+        transform: translateY(0px);
+        opacity: 100;
+        visibility: visible;
+    }
+    .box .content a:hover {
+        color: #000; ;
+        background: #ffffff;
+    
+    }
+    
     /* ----- Contact Section ----- */
+
+.contact { background-color: #f2f2f2;}
     .contact-sec {
         border-radius: 5px;
-        background-color: #f2f2f2;
         padding: 1em;
       }
     .column {
@@ -184,7 +269,7 @@ section { padding: 2em 0;}
     }
 
     .one .contact-title p{
-        font-size: 17px;
+
         color: #000000;
         letter-spacing: 1px;
         line-height: 1.2;
@@ -217,20 +302,19 @@ section { padding: 2em 0;}
     .icon-group .details span{
         display: block;
         color: #000000;
-        font-size: 18px;
     }
-    .icon-group .details span:nth-child(1){
+.icon-group .details span:nth-child(1){
         text-transform: uppercase;
         color:  #008080;
     }
-     .one .social-icon{
+.one .social-icon{
         display: flex;
         justify-content: flex-start;
         align-items: center;
         flex-wrap: wrap;
         margin: 1em 0 1em;
     } 
-    .social-icon a{
+.social-icon a{
         width: 2em;
         height: 2em;
         text-decoration: none;
@@ -238,54 +322,30 @@ section { padding: 2em 0;}
         margin-right: 1em;
         border-radius: 5px;
     }
-    .social-icon a i{ width: 2em;
+.social-icon a i{ width: 2em;
         height: 2em;
         color: #000000;
-        line-height: 1em;
-    }
-    input[type=text], select, textarea {
-        width: 100%;
-        padding: 12px;
-        border: 1px solid #ccc;
-        margin-top: 6px;
-        margin-bottom: 16px;
-        resize: vertical;
+        line-height: 1em;}
+form>label { color: #007070;
+    border: none;}
+input[type=text], select, textarea {
+    width: 100%;
+    padding: 12px;
+    margin-top: 6px;
+    margin-bottom: 16px;
+    resize: vertical;}
+input[type=submit] {
+    background-color: #008080;
+    border-radius: 20px;
+    color: white;
+    padding: 12px 20px;
+    border: none;
+    cursor: pointer;}
+input[type=submit]:hover {
+        background-color: #ffffff;
+        color: #008080;
+        border: 1px solid #008080 ;
       }
-    
-      input[type=submit] {
-        background-color: #008080;
-        color: white;
-        padding: 12px 20px;
-        border: none;
-        cursor: pointer;
-      }
-    input[type=submit]:hover {
-        background-color: #000000;
-      }
-    
-    
-    /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
-    @media screen and (max-width: 600px) {
-      .column, input[type=submit] {
-        width: 100%;
-        margin-top: 0;
-      }
-    }
-
-@media(max-width: 1100px){
-	.messageForm .halfWidth{
-		flex-basis: 100%;
-	}
-}
-@media(max-width: 900px){
-	.container .row{
-		flex-wrap: wrap;
-	}
-	.row section.left, .row section.right{
-		flex-basis: 100%;
-		margin: 0px;
-	}
-}
 
     /* ----- Footer Section ----- */
 
@@ -301,4 +361,69 @@ footer {box-shadow:
 
     /* ----- Mobile Responsive ----- */
 
+@media screen and (max-width: 768px) {
+    /* ----- Home ----- */
+
+    /* ----- Service ----- */
+
+.sample-sec {
+        grid-template-columns: repeat(1,1fr);
+}
+    /* ----- Skills ----- */
+
+    /* ----- Portfolio ----- */
+
+    /* ----- Sample ----- */
+
+    /* ----- About ----- */
+
+    /* ----- Contact ----- */
+
+}
+
+    /* ----- Tab Responsive ----- */
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+    /* ----- Home ----- */
+
+    /* ----- Service ----- */
+
+.sample-sec {
+        grid-template-columns: repeat(2,1fr);
+    }
+    /* ----- Skills ----- */
+
+    /* ----- Portfolio ----- */
+
+    /* ----- Sample ----- */
+
+    /* ----- About ----- */
+
+    /* ----- Contact ----- */
+
+
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column, input[type=submit] {
+      width: 100%;
+      margin-top: 0;
+    }
+  }
+
+@media(max-width: 1100px){
+  .messageForm .halfWidth{
+      flex-basis: 100%;
+  }
+}
+@media(max-width: 900px){
+  .container .row{
+      flex-wrap: wrap;
+  }
+  .row section.left, .row section.right{
+      flex-basis: 100%;
+      margin: 0px;
+  }
+}
 
