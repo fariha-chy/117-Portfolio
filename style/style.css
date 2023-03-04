@@ -46,7 +46,9 @@ nav {box-shadow: 0 1px 5px black;
 nav a:hover {color: #ffffff;
     border-bottom: 3px solid #000000;}
 section { padding: 2em 0;}
-    /* ----- Hearder Section ----- */
+
+    /* ----- Home Section ----- */
+
 #home {background-color: #0080807c; }
 .home {display: flex;
     position: relative; 
@@ -67,15 +69,16 @@ section { padding: 2em 0;}
     rgba(0, 0, 0, 0.07) 0px 2px 4px, 
     rgba(0, 0, 0, 0.07) 0px 4px 8px, 
     rgba(0, 0, 0, 0.07) 0px 8px 16px, 
-    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, 
+    rgba(0, 0, 0, 0.07) 0px 32px 64px;
     animation: float 2s ease-in-out infinite;
     animation-delay: 3s;}
 .cover-pic img{width: 15em;
     height: 15em;}
-@keyframes float {
+/* @keyframes float {
     0%{transform: translatey(0);}
     50%{transform: translatex(-25px);}
-    100%{transform: translatey(0);}}
+    100%{transform: translatey(0);}} */
 
 .cover-title .freelancer {
     height: 2em ;
@@ -89,54 +92,26 @@ section { padding: 2em 0;}
 .freelancer li span{
     position: relative;}
 
-
     /* ----- Skills Section ----- */
 
-.skills{
-    display: grid;
-    place-items: center;
-    box-shadow: 
-    rgba(0, 0, 0, 0.25) 0px 0.0625em 0.0625em, 
-    rgba(0, 0, 0, 0.25) 0px 0.125em 0.5em, 
-    rgba(255, 255, 255, 0.1) 0px 0px 0px 1px inset;
-}
-.skills-sec {
-    /* height: 10em; */
-    margin: auto;
-    position: inherit;
-    width: 90%;
-    display: grid;
-    place-items: center;
-    overflow: hidden;
-}
-.slide-container{display: flex;
-    width: calc(250px * 18);
-    animation: scroll 25s linear infinite;}
-@keyframes scroll { 
-    0% {transform: translateX(0);}
-    100% {transform: translateX(calc(-250px * 10));}}
-.slide-img {
-    width: 10em;
-    height: 10em;
-    display: flex;
-    align-items: center;
-    padding: 1em;
-    perspective: 100px;
-}
-.slide-img>img {width: 5em;
-    height: 5em;
-    transition: transform 6s;
-}
-.slide-img>img:hover {transform: scale(1.4);
-    transition-duration: 1.5s; }
 
     /* ----- Portfolio Section ----- */
 
-.portfolio-sec {display: grid;
-    grid-template-columns: repeat(2,1);
-    gap: 2em;
-}
-
+    .portfolio {padding-top: 1em;}
+    .portfolio-section { display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 4em;
+        border-radius: 1em;}
+    .picture {width: 20em;
+        height: 20em;
+        border-radius: 0.3rem;
+        overflow: hidden;
+        box-shadow: 0 1px 5px black;}
+    .picture img { width: 100%;
+        height: 100%;}
+    .picture img:hover {transform: scale(1.5);
+        transition-duration: 1.5s; }
+    
     /* ----- Sample Section ----- */
 
     .sample-sec {position: relative;
@@ -361,9 +336,10 @@ footer {box-shadow:
 
     /* ----- Mobile Responsive ----- */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 767px) {
     /* ----- Home ----- */
-
+.home-sec {
+    grid-template-columns: repeat(1, 1fr); }
     /* ----- Service ----- */
 
 .sample-sec {
@@ -372,7 +348,9 @@ footer {box-shadow:
     /* ----- Skills ----- */
 
     /* ----- Portfolio ----- */
-
+    .portfolio-section { justify-items: center;
+        grid-template-columns: repeat(1, 1fr);
+        gap: 2em;}
     /* ----- Sample ----- */
 
     /* ----- About ----- */
@@ -383,7 +361,7 @@ footer {box-shadow:
 
     /* ----- Tab Responsive ----- */
 
-@media screen and (min-width: 768px) and (max-width: 992px) {
+@media screen and (min-width: 768px) and (max-width: 1200px)  {
     /* ----- Home ----- */
 
     /* ----- Service ----- */
@@ -394,7 +372,9 @@ footer {box-shadow:
     /* ----- Skills ----- */
 
     /* ----- Portfolio ----- */
-
+    .works-section {justify-items: center;
+        grid-template-columns: repeat(2, 1fr);
+            gap: 1em;}
     /* ----- Sample ----- */
 
     /* ----- About ----- */
