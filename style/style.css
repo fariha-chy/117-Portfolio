@@ -22,62 +22,56 @@ li { list-style: none;}
     rgba(0, 0, 0, 0.09) 0px 10px 17px;
     background-color: #008080;
     color: rgb(0, 0, 0) ;
-    padding: .6em 1em ;
+    padding: .5em .7em ;
     border-radius: 2em;
     border: 2px solid transparent;
-    margin: 1em;}
+    margin-left: .7em;
+}
 .btns:hover {border: 2px solid #008080;
     background-color: #ffffff;
     color: #000;}
-h2 {padding: 2em 0 1em 0;;
+h2 {
+    padding: 3em 0 1em 0;;
     text-align: center;
     color: #000000;
-    font-weight: 600;}
-h4 {color: #000000;
-    font-weight: 600;}
-
-    /* ---------- Nav Section ---------- */ 
-
-nav ul li a { color: #000;
-    text-transform: uppercase;}
-nav {box-shadow: 0 1px 5px black;
-    font-weight: 500;}
-.nav-section .logo:hover{
-    transform:rotateX(360deg);
-    transition-duration: 1.5s;}
-nav a:hover {color: #ffffff;
-    border-bottom: 3px solid #000000;}
-section { padding: 2em 0;}
+    font-weight: 600;
+}
 
     /* ----- Home Section ----- */
 
-#home {background-color: #0080807c; }
-.home {display: flex;
-    position: relative; 
-}
-.home-sec {padding-top: 3em;
+#home {background-color: #000505e0; }
+
+.home-sec {padding: 3em;
     display: grid; 
     grid-template-columns: repeat(2, 1fr); 
+    gap: 3em;
     align-items: center;
     text-align: center;
     justify-items: center;  
 }
+.cover-title .glow {
+    color: #000000; 
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 
+    0 0 30px #fff, 0 0 4px #c7c7c7, 
+    0 0 70px #dddddd, 0 0 8px #cecece, 
+    0 0 50px rgb(241, 241, 241);
+}
 .cover-pic {
-    border: 5px solid ;
+    border: 5px solid whitesmoke ;
     border-radius: 15em;
     overflow: hidden;
     width: 15em;
     height: 15em;
-    box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, 
-    rgba(0, 0, 0, 0.07) 0px 2px 4px, 
-    rgba(0, 0, 0, 0.07) 0px 4px 8px, 
-    rgba(0, 0, 0, 0.07) 0px 8px 16px, 
-    rgba(0, 0, 0, 0.07) 0px 16px 32px, 
-    rgba(0, 0, 0, 0.07) 0px 32px 64px;
-    animation: float 2s ease-in-out infinite;
-    animation-delay: 3s;}
+}
 .cover-pic img{width: 15em;
-    height: 15em;}
+    height: 15em;
+}
+.cover-pic img:hover{
+    box-shadow: 0 0 10px #fff, 0 0 20px #fff, 
+    0 0 30px #fff, 0 0 4px #c7c7c7, 
+    0 0 70px #dddddd, 0 0 8px #cecece, 
+    0 0 50px rgb(241, 241, 241);
+}
 /* @keyframes float {
     0%{transform: translatey(0);}
     50%{transform: translatex(-25px);}
@@ -95,6 +89,36 @@ section { padding: 2em 0;}
 .freelancer li span{
     position: relative;} */
 
+
+    /* ----- Navbar Section ----- */
+
+#header_wrapper {
+    background: #F9F9F9;
+    padding: .5em 0px;
+	color: #000000;
+    border-bottom: 1px solid #E8E8E8;
+}
+.header_box {
+    position: fixed;
+}
+.Navbar {box-shadow: 
+    rgba(0, 0, 0, 0.45) 0px 1px 10px 10px;
+}
+.navbar-brand {
+    font-weight: bold;
+    font-size: 2em;
+  }
+.navbar-brand:hover {transform:rotateX(360deg);
+    transition-duration: 1.5s;
+}
+  .navbar-nav .nav-link {
+    font-size: 1.2rem;
+    margin-left: 1em;
+}
+  .navbar-nav .nav-link.active {color: #004d4d;
+    font-weight: bold;
+    border-bottom: 2px solid black;
+}
 /* ----- Service Section ----- */
 
 .service-sec {position: relative;
@@ -115,11 +139,11 @@ section { padding: 2em 0;}
 .service-sec .box:before {
         content:'' ;
         position: absolute;
-        top: -5px;
+        top: -4px;
         left: -3px;
         right: -3px;
-        bottom: -5px;
-        background-color: #000;
+        bottom: -4px;
+        background-color: #008080;
         transform: skew(2deg, 2deg);
         z-index: -1 ;
 }
@@ -130,28 +154,27 @@ section { padding: 2em 0;}
 .box .content h2 {
         position: absolute;
         top: 20px;
-        right: 20px;
+        right: 0px;
         margin: 0;
         padding: 0;
         font-size: 5em;
         color: #55555541;
-        transition: 0.5s;
-    }
+        transition: 1s;
+}
 .box:hover .content h2{
-        transform: translatex(20px);
-    }
+        transform: translatex(-20px);
+}
 .box .content h3{
         margin: 0 0 10px;
         padding: 0;
         font-size: 24px;
         font-weight: 600;
         color: #000000;
-    }
+}
 .box .content p {
-        margin: 0;
-        padding: 0;
-        
-    }
+    margin: 0;
+    padding: 0;
+}
 .box .content a {
         position: relative;
         margin: 0;
@@ -179,32 +202,25 @@ section { padding: 2em 0;}
     /* ----- Skills Section ----- */
 
 .skills {
-   justify-content: center; 
+   justify-items: center; 
 }
 .skill-sec>.row>.col {
     border-radius: 10px;
     text-align: center;
-    color: #ffffff;
-    background-color: #008080; 
+    color: #000000;
+    background-color: #ffffff;
     box-shadow: 
-    rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, 
-    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, 
-    rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, 
-    rgba(0, 0, 0, 0.06) 0px 2px 1px, 
-    rgba(0, 0, 0, 0.09) 0px 4px 2px, 
-    rgba(0, 0, 0, 0.09) 0px 8px 4px, 
-    rgba(0, 0, 0, 0.09) 0px 16px 8px, 
-    rgba(0, 0, 0, 0.09) 0px 10px 17px;
+    rgba(0, 0, 0, 0.377) 0px 4px 6px -1px,
+    rgba(66, 66, 66, 0.06) 0px 2px 4px -1px;
 }
-.logo-s img{
+.logo-s img{justify-items: center;
     margin:2em .5em;
-    width: 2em;
-    height: 2em;
+    width: 3em;
+    height: 3em;
 }
-.hr{margin-top: 1em ;
+.hr{margin: 2em ;
     border: 0;
     height: 1px;
-    margin-bottom: 5px;
     background-image: linear-gradient(to right, 
     rgba(0, 0, 0, 0), 
     rgba(0, 0, 0, 1),
@@ -212,31 +228,33 @@ section { padding: 2em 0;}
 }
 .logo-s{
     display: grid;
-    grid-template-columns: repeat(11, 1fr);
+    grid-template-columns: repeat(8, 1fr);
     align-items: center;
     justify-items: center;
 }
 .logo-s img:hover{
     transform: scale(1.5);
-    transition: transform 0.5s ease-in-out;
+    transition: transform 0.5s ease;
 }
+.skill-sec>.row>.col:hover {box-shadow: 
+    #00808080 0px 0px 0px 3px;
+}
+
     /* ----- Portfolio Section ----- */
 
-.portfolio {padding-top: 1em;}
-    .portfolio-section { display: grid;
+.portfolio-section { display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 2em;
+        gap: 4em;
         border-radius: 1em;}
-    .picture {width: 20em;
+.picture {width: 20em;
         height: 20em;
         border-radius: 0.3rem;
         overflow: hidden;
         box-shadow: 0 1px 5px black;}
-    .picture img { width: 100%;
+.picture img { width: 100%;
         height: 100%;}
-    .picture img:hover {transform: scale(1.5);
-        transition-duration: 1.5s; 
-    }
+.picture img:hover {transform: scale(1.5);
+        transition-duration: 1.5s; }
     
     /* ----- Sample Section ----- */
 
@@ -257,7 +275,7 @@ section { padding: 2em 0;}
         margin-top: 6px;
         padding: 1em;
       }
-    .row:after {
+.row:after {
         content: "";
         display: table;
         clear: both;
@@ -374,15 +392,9 @@ input[type=submit]:hover {
 
     /* ----- Footer Section ----- */
 
-footer {box-shadow: 
-    rgba(0, 0, 0, 0.25) 0px 54px 55px, 
-    rgba(0, 0, 0, 0.12) 0px -12px 30px, 
-    rgba(0, 0, 0, 0.12) 0px 4px 6px, 
-    rgba(0, 0, 0, 0.17) 0px 12px 13px, 
-    rgba(0, 0, 0, 0.09) 0px -3px 5px;
-    background-color: #000000;
-    text-align: center;
-    }
+footer {background-color: #000;
+    text-align: center;}
+footer p {margin-bottom: -1rem;}
 
     /* ----- Mobile Responsive ----- */
 
@@ -390,30 +402,32 @@ footer {box-shadow:
     /* ----- Home ----- */
 .home-sec {
     grid-template-columns: repeat(1, 1fr);
- }
+}
     /* ----- Service ----- */
 .service-sec {justify-items: center;
     grid-template-columns: repeat(1,1fr);
-    }
+}
     /* ----- Skills ----- */
+
 .logo-s img{
     margin: .5em .3em;
-    width: 1em;
-    height: 1em;}
+    width: 2em;
+    height: 2em;
+}
     /* ----- Portfolio ----- */
+
 .portfolio-section { justify-items: center;
-        grid-template-columns: repeat(1, 1fr);
-        gap: 2em;}
+    grid-template-columns: repeat(1, 1fr);
+}
     /* ----- Sample ----- */
 
-    /* ----- About ----- */
 
     /* ----- Contact ----- */
 }
 
     /* ----- Tab Responsive ----- */
 
-@media screen and (min-width: 768px)  {
+@media screen and (min-width: 768px) and (max-width: 992px) {
     /* ----- Home ----- */
 
     /* ----- Service ----- */
@@ -422,11 +436,12 @@ footer {box-shadow:
         
     /* ----- Skills ----- */
 
+
     /* ----- Portfolio ----- */
-
+.portfolio-section { justify-items: center;
+    grid-template-columns: repeat(2, 1fr);
+    }
     /* ----- Sample ----- */
-
-    /* ----- About ----- */
 
     /* ----- Contact ----- */
 }

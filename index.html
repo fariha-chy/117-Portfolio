@@ -12,52 +12,13 @@
 </head>
 <body>
 
-  <!-- ----- Navbar Section ----- -->
-
-<section>
-    <nav class="navbar navbar-expand-lg bg-body-tertiary fixed-top " style="color: #008080;">
-        <div class="nav-section container">
-            <label class="logo" style="font-size: 2em;
-            font-weight: bold;">FARIHA</label>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent" style="font-size: 1.2em; color: #008080;">
-            <ul class="navbar-nav ms-auto mb-1 mb-lg-0" style="color: #008080;">
-                <li class="nav-item">
-                    <a class="nav-link" href="#home">Home</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#about">About</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#service">Service</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#skills">Skills</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#portfolio">Portfolio</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#sample">Sample</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#contact">Contact</a>
-                </li>
-                </ul>
-              </div>
-            </div>
-    </nav>
-</section>
-
   <!-- ----- Home Section ----- -->
 
 <section id="home" class="home">
-    <div class="home-sec">
+    <div class="home-sec"y>
         <div class="cover-1">
             <div class="cover-title">
-                <h1>I am a FREELANCER</h1>
+                <h1 class="glow">I AM A FREELANCER</h1>
                 <!-- <h3>
                 <ul class="freelancer">
                     <li><span><i class="fa-solid fa-less-than"></i> Graphics Design <i class="fa-solid fa-greater-than"></i></span></li>
@@ -68,7 +29,7 @@
                     <- <li><span>Photographey & Videography</span></li> -->
                 </ul>
                 </h3><br>
-            <button type="button" class="btn btn-outline-dark m-3">View MY Work </button>
+            <button type="button" class="btn btn-outline-light m-2">View MY Work </button>
             <a class="btns" href="">Contact Me <i class="far fa-arrow-alt-circle-down"></i></a>
             </div>
         </div>
@@ -80,9 +41,51 @@
     </div>
 </section>
 
-  <!-- ----- Services Section ----- -->
+  <!-- ----- Navbar Section ----- -->
 
-<section id="service" class="service">
+<section class="Navbar" style="z-index: 10; position: -webkit-sticky;
+  position: sticky; top: 0; ">
+    <nav id="header_wrapper" class=" navbar navbar-expand-lg " 
+    style="background-color: #bdbdbd;" >
+      <div class="container-fluid  container">
+        <a class="navbar-brand" style="color: #008080; " href="#home">FARIHA</a>
+        <button class="navbar-toggler" type="button" 
+        data-bs-toggle="collapse" data-bs-target="#navbarNav" 
+        aria-controls="navbarNav" aria-expanded="false" 
+        aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0 ">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#home">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#about">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#service">Services</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#skills">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#portfolio">Portfolio</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#sample">Sample</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+</section>
+
+  <!-- ----- Services Section ----- -->
+<service" class="service">
     <h2>Services</h2>
     <div class="service-sec container">
         <div class="box">
@@ -183,9 +186,6 @@
         <hr class="hr">
     </div>
     <div class="logo-s">
-      <img src="/image/skills/ms-word.png" alt="">
-      <img src="/image/skills/ms-excel.png" alt="">
-      <img src="/image/skills/powerpoint.png" alt=""> 
       <img src="/image/skills/photoshop.png" alt="">
       <img src="/image/skills/illustrator.png" alt="">
       <img src="/image/skills/audition.png" alt="">
@@ -220,7 +220,7 @@
 <section id="sample">
   <h2>Sample</h2>
   <div class="sample-sec container">
-    <div class="row row-cols-1 row-cols-md-2 g-4">
+    <div class="row row-cols-1 row-cols-md-4 g-4 row-cols-sm-2">
       <div class="col">
         <div class="card">
           <img src="/image/works/blog-2.png" class="card-img-top" alt="">
@@ -268,15 +268,15 @@
     <!-- ----- Hire Me Section ----- -->
 
 <section class="hire">
-  <div class="hero-wrap my-2">
-    <div class="hero-mask opacity-8 bg-dark"></div>
+  <div class="hero-wrap mt-5 py-5">
+    <div class="hero-mask opacity-5 bg-dark"></div>
       <div class="react-parallax" style="position: relative; overflow: hidden;">
         <img class="react-parallax-bgimage" src="/image/hire-background.png" alt="" style="position: absolute; left: 50%; transform: translate3d(-50%, -75px, 0px); transform-style: preserve-3d; backface-visibility: hidden; height: 100; width: 100%; filter: none; ">
           <div class="react-parallax-content mb-5"  style="position: relative;">
             <div class="hero-content section">
               <div class="container text-center py-2 wow fadeInup" style="visibility: visible;" >
-                <h2 class="text-10 text-white" style="font-size: 2em;">Interested in working with me?</h2>
-                <a href="#contact" class="btns" class="  m-5">Hire Me</a>
+                <h3 class="text-2 text-white" style="font-size: 1.5em;">Interested in working with me?</h3>
+                <a href="#contact" class="btns" class=" m-2">Hire Me</a>
               </div>
             </div>
           </div>
@@ -287,11 +287,11 @@
     <!-- ----- About Section ----- -->
 
 <section id="about">
-    <div class="container" >
-    <h2>About Me</h2>
-    <h5 class="text-center mb-2">
-        <span class="h3 " >Hello!</span><br>I'm <span class="h3" style="color: #008080; font-size:bold;">Fariha Chowdhury.</span></h5>
-    <p class="text-center">I am a skilled and dedicated person with a passion for creating high-quality content that meets the unique needs of each client.<br> I have honed my skills in writing, editing, and project management to deliver outstanding results on every project. Whether you need blog posts, or website copy, I am committed to working closely with you to bring your vision to life.<br>
+  <h2>About Me</h2>
+  <div class="container mb-5" >
+  <h5 class="text-center mb-2">
+  <span class="h3 " >Hello!</span><br>I'm <span class="h3" style="color: #008080; font-size:bold;">Fariha Chowdhury.</span></h5>
+    <p class="text-center px-5">I am a skilled and dedicated person with a passion for creating high-quality content that meets the unique needs of each client.<br> I have honed my skills in writing, editing, and project management to deliver outstanding results on every project. Whether you need blog posts, or website copy, I am committed to working closely with you to bring your vision to life.<br>
     If you're looking for a reliable and talented freelancer, please feel free to browse through my portfolio and get in touch with me for your next project. I look forward to working with you.<br>Let's work together to achieve your goals and take your business to the next level.</p>
     <!-- <a href="#contact" class="btns" style="justify-items: center;">Hire me</a> -->
     </div>
@@ -307,7 +307,7 @@
             <div class="contact one">
                 <div class="contact-title">
                   <h3>FARIHA CHOWDHURY</h3>
-                  <p>Presentation Creation, Website Design & Development, Graphics Design, Photography, Animation, Audio Editing, Videography & Editing Service Provider</p>
+                  <p>Presentation Creation, Website Design & Development, Graphics Design, Animation, Photography &Videography, Audio & Video Editing Service Provider</p>
                 </div>
                 <div class="contact-info">
                   <div class="icon-group">
@@ -363,10 +363,12 @@
     <!-- ----- Footer Section ----- -->
 
 <footer>
-    <p class="p-5 text-light">Copyright @ <a href="">Fariha Chowdhury</a> </p>
+    <p class="p-4 text-light">Copyright @ <a href="">Fariha Chowdhury</a> </p>
 </footer>
 
     <!-- ----- END ----- -->
+
     <script src="/bootstrap/js/bootstrap.min.js"></script>
+
 </body>
 </html>
