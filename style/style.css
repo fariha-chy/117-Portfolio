@@ -9,11 +9,11 @@ body {margin: 0%;
     justify-content: center;
     align-items: center;
     box-sizing: border-box;}
-a { text-decoration: none;}
-li { list-style: none;}
-.btns {
-    box-shadow: 
-    rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset, rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, 
+a { text-decoration: none; }
+li { list-style: none; }
+.btns { box-shadow: 
+    rgba(0, 0, 0, 0.17) 0px -23px 25px 0px inset,
+    rgba(0, 0, 0, 0.15) 0px -36px 30px 0px inset, 
     rgba(0, 0, 0, 0.1) 0px -79px 40px 0px inset, 
     rgba(0, 0, 0, 0.06) 0px 2px 1px, 
     rgba(0, 0, 0, 0.09) 0px 4px 2px, 
@@ -21,15 +21,11 @@ li { list-style: none;}
     rgba(0, 0, 0, 0.09) 0px 16px 8px, 
     rgba(0, 0, 0, 0.09) 0px 10px 17px;
     background-color: #008080;
-    color: rgb(255, 255, 255) ;
+    color: white ;
     padding: .5em .8em ;
     border-radius: 2em;
     border: 2px solid transparent;
-    margin-left: .7em;
-}
-.btns {
-    padding: .5em .8em ;
-    margin-left: .7em;
+    margin-left: 1em;
 }
 .btns:hover {border: 2px solid #008080;
     background-color: #ffffff;
@@ -45,7 +41,8 @@ h2 {
 
 #home {background-color: #000505e0; }
 
-.home-sec {padding: 3em;
+.home-sec {
+    padding: 3em;
     display: grid; 
     grid-template-columns: repeat(2, 1fr); 
     gap: 3em;
@@ -54,14 +51,14 @@ h2 {
     justify-items: center;
 }
 .cover-title .glow {
-    color: #000000; 
+    color: #000; 
     text-shadow: 0 0 10px #fff, 0 0 20px #fff, 
     0 0 30px #fff, 0 0 4px #c7c7c7, 
     0 0 70px #dddddd, 0 0 8px #cecece, 
     0 0 50px rgb(241, 241, 241);
 }
 .cover-pic {
-    border-radius: 6em .1em;
+    border-radius: 5em .1em;
     overflow: hidden;
     width: 20em;
     height: 20em;
@@ -73,10 +70,10 @@ h2 {
 .cover-pic img{width: 100%;}
 
 @keyframes animate-image {
-        0% { transform: translateX(15px) translateY(-15px);}
-        50% {transform: translateX(0px) translateY(0px);}
-        100% { transform: translateX(-15px) translateY(-15px);}
-      }   
+    0% { transform: translateX(15px) translateY(-15px);}
+    50% {transform: translateX(0px) translateY(0px);}
+    100% { transform: translateX(-15px) translateY(-15px);}
+}   
 
     /* ----- Navbar Section ----- */
 
@@ -92,10 +89,7 @@ h2 {
 .Navbar {box-shadow: 
     rgba(0, 0, 0, 0.15) 0px 1px 15px 6px;
 }
-.navbar-brand {
-    font-weight: bold;
-    font-size: 2em;
-  }
+
 .navbar-brand:hover {transform:rotatey(360deg);
     transition-duration: 1.5s;
 }
@@ -205,8 +199,7 @@ h2 {
 .logo img:hover {transform: scale(1.5);
     transition-duration: 1.5s;
 }
-
-.hr{margin: 2em ;
+.hr{margin: 1em ;
     border: 0;
     height: 1px;
     background-image: linear-gradient(to right, 
@@ -262,13 +255,12 @@ h2 {
 .gallery .box:hover .title {
     transform: translateX(0%);
 }
-
-    
+ 
     /* ----- Sample Section ----- */
 
 .sample-sec {
     display: grid;
-    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: repeat(4,1fr);
     gap: 1.5em;
 }
 .sample-sec .box {
@@ -283,11 +275,11 @@ h2 {
         box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
         transition: all 0.3s ease-in-out;
       }
-      .sample-sec .box:hover {
+.sample-sec .box:hover {
         transform: scale(1.0);
         box-shadow: 0px 0px 10px #008080;
       }
-      .sample-sec .box img {
+.sample-sec .box img {
         width: 100%;
         height: 200px;
         object-fit: cover;
@@ -295,29 +287,28 @@ h2 {
         margin-bottom: 20px;
         transition: all 0.3s ease-in-out;
       }
-      .sample-sec .box:hover img {
-        filter: brightness(70%);
-      }
-      .sample-sec .box button {
+.sample-sec .box:hover img {
+    filter: brightness(80%);
+}
+.sample-sec .box button {
         background-color: #008080;
         color: white;
-        font-weight: 700;
-        border: none;
-        border-radius: 1em;
-        padding: .7em 1em;
+        border: 2px solid #e6e6e6;
+        border-radius: 2em;
+        padding: .5em 1.5em;
       }
-      .sample-sec .box button:hover {
-        color: #008080;
-        background-color: #ffffff;
-        border: 2px solid #008080;
-      }
+.sample-sec .box button:hover {
+    color: #008080;
+    background-color: #ffffff;
+    border: 2px solid #008080;
+}
 
     /* ----- Contact Section ----- */
 
 /* .contact { background-color: #f2f2f2;} */
 .contact-sec {
-        border-radius: 5px;
-        padding: 1em;
+    border-radius: 5px;
+    padding: 1em;
 }
 .column {
         float: left;
@@ -326,31 +317,31 @@ h2 {
         padding: 1em;
 }
 .row:after {
-        content: "";
-        display: table;
-        clear: both;
-    }
+    content: "";
+    display: table;
+    clear: both;
+}
     .contact-sec .contact-box{
         display: flex;
         justify-content: space-between;
         width: 100%;
-    }
+}
     .contact-box .contact{
         display: flex;
         flex-direction: column;
-    }
+}
     .contact-box .one{
         flex-basis: 35%;
         min-width: 320px;
         margin-right: 60px;
-    }
+}
     .one .contact-title h3{
         position: relative;
         font-weight: 600;
         color: #008080;
         display: inline-block;
         margin-bottom: 1em;
-    }
+}
     .one .contact.title h3::before{
         content: '';
         position: absolute;
@@ -359,7 +350,7 @@ h2 {
         background-color: #008080;
         top: 120%;
         left: 0;
-    }
+}
     .one .contact-title p{
         color: #000000;
         letter-spacing: 1px;
@@ -453,14 +444,15 @@ footer p {margin-bottom: -1rem;}
     /* ----- Home ----- */
 
 .home .home-sec {
+    padding: 3em 1em;
     display: flex;
     grid-template-columns: repeat(1, 1fr);
     flex-direction: column-reverse; 
     flex-wrap: wrap;
 }
 .cover-pic {
-    width: 14em;
-    height: 14em;
+    width: 13em;
+    height: 13em;
 }
     /* ----- Service ----- */
 .service-sec {justify-items: center;
@@ -500,18 +492,21 @@ footer p {margin-bottom: -1rem;}
 
 @media screen and (min-width: 580px) and (max-width: 992px) {
     /* ----- Home ----- */
+.home .home-sec {
+    padding: 3em 1.5em;
+}
 .cover-pic {
     width: 16em;
     height: 16em;
-    }
+}
     /* ----- Service ----- */
 .service-sec {
-    grid-template-columns: repeat(2,1fr); }
-        
+    grid-template-columns: repeat(2,1fr); 
+}       
     /* ----- Skills ----- */
 .logos .logo {
-        width: 7.5em;
-        height: 7.5em;
+    width: 7.5em;
+    height: 7.5em;
 }
 .skill-sec .logos {justify-self: center;
     gap: 1.8em;
