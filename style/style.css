@@ -27,14 +27,16 @@ li { list-style: none; }
     border: 2px solid transparent;
     margin-left: 1em;
 }
-.btns:hover {border: 2px solid #008080;
+.btns:hover {
+    border: 2px solid #008080;
     background-color: #ffffff;
-    color: #000;}
+    color: #000;
+}
 h2 {
     padding: 3em 0 .8em 0;;
     text-align: center;
     color: #000000;
-    font-weight: 900;
+    font-weight: bolder;
 }
 
     /* ----- Home Section ----- */
@@ -125,12 +127,11 @@ h2 {
         transform: skew(2deg, 2deg);
         z-index: -1 ;
 }
-
 .content {justify-content: center;
         position: relative;
         padding: 1em;
 }
-.box .content h2 {
+.box .content i {
         position: absolute;
         top: 20px;
         right: 0px;
@@ -140,7 +141,7 @@ h2 {
         color: #55555541;
         transition: 1s;
 }
-.box:hover .content h2{
+.box:hover .content i {
         transform: translatex(-20px);
 }
 .box .content h3{
@@ -192,20 +193,21 @@ h2 {
     width: 11em;
     height: 11em;
     border-radius: 0.3rem;
-    overflow: hidden;
-    box-shadow: 0 1px 5px black;}
+    margin: 1em 0em;
+}
 .logo img { width: 100%;
-    height: 100%;}
-.logo img:hover {transform: scale(1.5);
-    transition-duration: 1.5s;
+    height: 100%;
+}
+.logo img:hover {transform: scale(1.2);
+    transition-duration: .5s;
 }
 .hr{margin: 1em ;
     border: 0;
     height: 1px;
     background-image: linear-gradient(to right, 
-    rgba(0, 0, 0, 0), 
+    rgba(3, 0, 0, 0), 
     rgba(0, 0, 0, 1),
-    rgba(0, 0, 0, 0));
+    rgba(3, 0, 0, 0));
 }
 
     /* ----- Portfolio Section ----- */
@@ -239,7 +241,7 @@ h2 {
     transition: all 0.5s ease-in-out;
     }
 .gallery .box:hover .image img {
-    transform: scale(1.2);
+    transform: scale(1.1);
 }
 .gallery .box .title {
     color: white;
@@ -308,21 +310,14 @@ h2 {
 
 /* .contact { background-color: #f2f2f2;} */
 .contact-sec {
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
     border-radius: 5px;
     padding: 1em;
+    align-items: center;
 }
-.column {
-        float: left;
-        width: 50%;
-        margin-top: 6px;
-        padding: 1em;
-}
-.row:after {
-    content: "";
-    display: table;
-    clear: both;
-}
-    .contact-sec .contact-box{
+
+.contact-sec .contact-box{
         display: flex;
         justify-content: space-between;
         width: 100%;
@@ -336,31 +331,16 @@ h2 {
         min-width: 320px;
         margin-right: 60px;
 }
-    .one .contact-title h3{
-        position: relative;
-        font-weight: 600;
-        color: #008080;
-        display: inline-block;
-        margin-bottom: 1em;
+.one .contact-title h3 {
+    position: relative;
+    font-weight: 600;
+    color: #008080;
+    display: inline-block;
+    margin-bottom: 1em;
 }
-    .one .contact.title h3::before{
-        content: '';
-        position: absolute;
-        width: 50%;
-        height: 1px;
-        background-color: #008080;
-        top: 120%;
-        left: 0;
+.one .contact-info{
+    margin-bottom: .5em;
 }
-    .one .contact-title p{
-        color: #000000;
-        letter-spacing: 1px;
-        line-height: 1.2;
-        padding-bottom: 1px;
-    }
-    .one .contact-info{
-        margin-bottom: .5em;
-    }
 .contact-info .icon-group{
         display: flex;
         align-items: center;
@@ -392,6 +372,7 @@ h2 {
 .icon-group .details span:nth-child(1){
         text-transform: uppercase;
         color:  #008080;
+        font-weight: bold;
     }
 .one .social-icon{
         display: flex;
@@ -407,31 +388,22 @@ h2 {
         border-radius: 5px;
     }
                 /* -------------- */
-form>label { color: #007070;
-    border: none;
+.contact-sec .column .contact-2 h3 {
+    font-weight: bold;
+    font-size: medium;
+    justify-self: 1em;
 }
-input[type=text], select, textarea {
-    width: 100%;
-    padding: 10px;
-    margin-top: 6px;
-    margin-bottom: 16px;
-    resize: vertical;
-    border: none;
-    border-bottom: 2px solid #008080 ;
+.contact-sec .contact-2 {
+    text-align: center;
 }
-input[type=submit] {
-    background-color: #008080;
-    border-radius: 20px;
-    padding: .6em 1em;
-    border: none;
-    cursor: pointer;
+.contact-sec .contact-2 a{
+    margin: 0%; 
 }
-input[type=submit]:hover {
-        background-color: #ffffff00;
-        color: #008080;
-        border: 1px solid #008080 ;
+.contact-sec .column .contact {
+    align-items: flex-start;
 }
- 
+
+
     /* ----- Footer Section ----- */
 
 footer {background-color: #000;
@@ -443,7 +415,6 @@ footer p {margin-bottom: -1rem;}
 @media screen and (max-width: 580px) {
     
     /* ----- Home ----- */
-
 .home .home-sec {
     padding: 3em 1em;
     display: flex;
@@ -456,17 +427,22 @@ footer p {margin-bottom: -1rem;}
     height: 13em;
 }
     /* ----- Service ----- */
-.service-sec {justify-items: center;
+.service-sec {
+    justify-items: center;
     grid-template-columns: repeat(1,1fr);
 }
     /* ----- Skills ----- */
-.logos .logo {justify-self: center;
-        width: 3em;
-        height: 3em;
+.logos .logo {
+    justify-self: center;
+    width: 4em;
+    height: 4em;
 }
 .skill-sec .logos {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
     gap: .8em;
 }
+
     /* ----- Portfolio ----- */
 .portfolio-sec .gallery {
     grid-template-columns: repeat(1,1fr);
@@ -475,20 +451,24 @@ footer p {margin-bottom: -1rem;}
 .sample-sec {
     grid-template-columns: repeat(1,1fr);
 }
-
     /* ----- Contact ----- */
-.contact-sec .row{
+.contact-sec {
     display: flex;
     grid-template-columns: repeat(1, 1fr);
     flex-direction: column-reverse; 
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
 }
-.column, input[type=submit] {
-      width: 100%;
-      margin-top: 0;
-    }
+.contact-sec .contact-2 {
+    text-align: center;
+}
+.contact-sec .contact-2 a{
+    margin: 0%; 
+}
+.contact-sec .column .contact {
+    align-items: flex-start;
 }
 
+}
     /* ---------- Tab Responsive ---------- */
 
 @media screen and (min-width: 580px) and (max-width: 992px) {
@@ -521,8 +501,20 @@ footer p {margin-bottom: -1rem;}
     grid-template-columns: repeat(2,1fr);
 }
     /* ----- Contact ----- */
-}
+    .contact-sec {
+        display: flex;
+        grid-template-columns: repeat(1, 1fr);
+        flex-direction: column-reverse; 
+        /* flex-wrap: wrap; */
+    }
+    .contact-sec .contact-2 a{
+        margin: 0%; 
+    }
+.contact-sec .column .contact {
+    align-items: flex-start;
+}  
 
+}
 
 @media(max-width: 1100px){
   .messageForm .halfWidth{
@@ -530,12 +522,8 @@ footer p {margin-bottom: -1rem;}
   }
 }
 @media(max-width: 900px){
-  .container .row{
-      flex-wrap: wrap;
-  }
   .row section.left, .row section.right{
       flex-basis: 100%;
       margin: 0px;
   }
 }
-
